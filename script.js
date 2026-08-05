@@ -43,17 +43,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Hero Slider Logic
+
+
+
+// Destinations Carousel Logic
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.hero-slider .slide');
-    if (slides.length > 0) {
-        let currentSlide = 0;
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
         
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 5000); // Change slide every 5 seconds
+        let slideIndex = 0;
+        
+        const updateCarousel = () => {
+            if (slides.length === 0) return;
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            const gap = 20; // from CSS gap
+            track.style.transform = 'translateX(-' + (slideIndex * (slideWidth + gap)) + 'px)';
+        };
+
+        nextButton.addEventListener('click', () => {
+            const getVisibleSlides = () => {
+                if (window.innerWidth <= 576) return 1;
+                if (window.innerWidth <= 991) return 2;
+                return 3;
+            };
+            const maxIndex = slides.length - getVisibleSlides();
+            if (slideIndex < maxIndex) {
+                slideIndex++;
+            } else {
+                slideIndex = 0; // loop back
+            }
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            const getVisibleSlides = () => {
+                if (window.innerWidth <= 576) return 1;
+                if (window.innerWidth <= 991) return 2;
+                return 3;
+            };
+            const maxIndex = slides.length - getVisibleSlides();
+            if (slideIndex > 0) {
+                slideIndex--;
+            } else {
+                slideIndex = maxIndex; // loop to end
+            }
+            updateCarousel();
+        });
+        
+        window.addEventListener('resize', updateCarousel);
+        
+        // Initial setup
+        setTimeout(updateCarousel, 100); // Small delay to ensure styles are applied
     }
+});
+
+
+// New Destinations Carousel Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.dest-carousel-track');
+    if (!track) return;
+    
+    const prevBtn = document.querySelector('.dest-prev-arrow');
+    const nextBtn = document.querySelector('.dest-next-arrow');
+    
+    // Auto scroll left
+    let autoScroll = setInterval(() => scrollNext(), 3000);
+    
+    function scrollNext() {
+        if (!track) return;
+        const slideWidth = track.querySelector('.dest-carousel-slide').clientWidth + 20; 
+        
+        // If at the end, jump to start
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        }
+    }
+    
+    function scrollPrev() {
+        if (!track) return;
+        const slideWidth = track.querySelector('.dest-carousel-slide').clientWidth + 20;
+        track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+    }
+    
+    // Reset timer on manual interaction
+    function manualScroll(direction) {
+        clearInterval(autoScroll);
+        if (direction === 'next') scrollNext();
+        if (direction === 'prev') scrollPrev();
+        autoScroll = setInterval(() => scrollNext(), 3000);
+    }
+    
+    if (prevBtn) prevBtn.addEventListener('click', () => manualScroll('prev'));
+    if (nextBtn) nextBtn.addEventListener('click', () => manualScroll('next'));
 });
 
