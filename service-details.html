@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details - Alexzander International</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-details-section {
+            padding: 150px 0 100px;
+        }
+        .service-hero-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .service-grid-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+        .service-left h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .service-left p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .service-left h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .service-includes {
+            list-style: none;
+            padding: 0;
+        }
+        .service-includes li {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .service-includes li::before {
+            content: '•';
+            color: var(--secondary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .service-includes li h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        .service-includes li p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .service-right .gold-box {
+            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .service-right .gold-box h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .service-right .gold-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .apply-form h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        .apply-form .form-control {
+            background: #808080;
+            border: none;
+            color: white;
+            margin-bottom: 20px;
+            padding: 18px 20px;
+            border-radius: 5px;
+        }
+        .apply-form .form-control::placeholder {
+            color: #eeeeee;
+        }
+        .apply-form select.form-control {
+            appearance: none;
+        }
+        .apply-form .btn-send {
+            background: #0ea5e9;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .apply-form .btn-send:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 991px) {
+            .service-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-contact">
+                    <div class="top-contact-item">
+                        <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                        +91 8098600060
+                    </div>
+                    <div class="top-contact-item">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        alexzandermanpower.in@gmail.com
+                    </div>
+                    <div class="top-contact-item">
+                        <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                        Chennai
+                    </div>
+                </div>
+                <div class="top-social">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Alexzander International Logo" onerror="this.src='https://via.placeholder.com/50x50?text=AI'">
+                    <span>ALEXZANDER INTERNATIONAL</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <button class="btn-call-now" onclick="window.location.href='tel:+918098600060'">Call Us Now</button>
+        </div>
+    </header>
+
+    <section class="service-details-section">
+        <div class="container">
+            <img id="serviceImage" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=400&fit=crop" class="service-hero-img" alt="Service Image">
+            
+            <div class="service-grid-layout">
+                <div class="service-left">
+                    <h1 id="serviceTitle">Loading Service...</h1>
+                    <p id="serviceDesc">Please wait while we load the details for this service.</p>
+                    
+                    <h3 id="serviceIncludesTitle">Our Service Includes:</h3>
+                    <ul class="service-includes" id="serviceIncludesList">
+                        <li>
+                            <h4>Expert Consultation</h4>
+                            <p>Professional advice tailored to your specific requirements.</p>
+                        </li>
+                        <li>
+                            <h4>Document Preparation</h4>
+                            <p>Full assistance with preparing and verifying required documentation.</p>
+                        </li>
+                        <li>
+                            <h4>End-to-End Support</h4>
+                            <p>We are with you every step of the way until your process is complete.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-right">
+                    <div class="gold-box">
+                        <h2>Your Gateway to Global Opportunities</h2>
+                        <p>Seamless Visa & Passport Solutions for a Bright Future. Empowering Dreams, One Visa at a Time</p>
+                    </div>
+                    
+                    <div class="apply-form">
+                        <h2>Apply Now</h2>
+                        <form id="whatsappForm">
+                            <input type="text" id="waName" class="form-control" placeholder="Your Name" required>
+                            <select id="waGender" class="form-control" required>
+                                <option value="" disabled selected>Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <input type="tel" id="waPhone" class="form-control" placeholder="Mobile Number" required>
+                            <input type="email" id="waEmail" class="form-control" placeholder="Email (Optional)">
+                            <input type="text" id="waPlace" class="form-control" placeholder="Place" required>
+                            <button type="submit" class="btn-send">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/100x50?text=AI'">
+                    </a>
+                    <p>One-Stop Solution – Air tickets, Forex, tours, visas, and study abroad guidance under one roof.</p>
+                    <a href="about.html" style="color: white; font-weight: 500;">Read More</a>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="service-details.html?id=global-visa">Global Visa Consultation</a></li>
+                        <li><a href="service-details.html?id=visa-application">Visa Application Submission</a></li>
+                        <li><a href="service-details.html?id=visa-appointment">Visa Appointment Arrangements</a></li>
+                        <li><a href="service-details.html?id=interview-guidance">Interview Guidance</a></li>
+                        <li><a href="service-details.html?id=new-passport">New Passport Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i> +91 8098600060
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i> alexzandermanpower.in@gmail.com
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i> West Tambaram, Chennai
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 <span>Alexzander International</span>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="tel:+918098600060" class="float-btn call-float">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/918098600060" class="float-btn whatsapp-float" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="service-details.js"></script>
+</body>
+</html>
