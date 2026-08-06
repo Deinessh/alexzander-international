@@ -28,7 +28,7 @@ body {
     background-color: var(--bg-light);
     color: var(--text-main);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 /* Typography */
@@ -863,7 +863,7 @@ footer {
 .dest-carousel-track {
     display: flex;
     gap: 20px;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -938,3 +938,96 @@ footer {
     .dest-next-arrow { right: -5px; }
 }
 
+\n
+/* --- Load Animations --- */
+body {
+    animation: fadeInPage 0.8s ease-in-out;
+}
+@keyframes fadeInPage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Values List Styling --- */
+.values-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.values-list li {
+    position: relative;
+    padding: 15px 15px 15px 50px;
+    background: #f8fafc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-weight: 500;
+    color: var(--dark);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary);
+}
+.values-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background: #ffffff;
+}
+.values-list li::before {
+    content: '\f00c'; /* FontAwesome check */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+\n\n
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.loader-circle {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #e2e8f0;
+    border-top: 5px solid var(--secondary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+\n
+/* Custom Spacing Fixes */
+#services { padding-top: 40px !important; }
+#why-choose-us { padding-top: 40px !important; }
+.destinations-section { padding-top: 40px !important; }

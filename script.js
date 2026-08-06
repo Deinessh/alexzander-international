@@ -46,61 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Destinations Carousel Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    if (track) {
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.next-btn');
-        const prevButton = document.querySelector('.prev-btn');
-        
-        let slideIndex = 0;
-        
-        const updateCarousel = () => {
-            if (slides.length === 0) return;
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            const gap = 20; // from CSS gap
-            track.style.transform = 'translateX(-' + (slideIndex * (slideWidth + gap)) + 'px)';
-        };
-
-        nextButton.addEventListener('click', () => {
-            const getVisibleSlides = () => {
-                if (window.innerWidth <= 576) return 1;
-                if (window.innerWidth <= 991) return 2;
-                return 3;
-            };
-            const maxIndex = slides.length - getVisibleSlides();
-            if (slideIndex < maxIndex) {
-                slideIndex++;
-            } else {
-                slideIndex = 0; // loop back
-            }
-            updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-            const getVisibleSlides = () => {
-                if (window.innerWidth <= 576) return 1;
-                if (window.innerWidth <= 991) return 2;
-                return 3;
-            };
-            const maxIndex = slides.length - getVisibleSlides();
-            if (slideIndex > 0) {
-                slideIndex--;
-            } else {
-                slideIndex = maxIndex; // loop to end
-            }
-            updateCarousel();
-        });
-        
-        window.addEventListener('resize', updateCarousel);
-        
-        // Initial setup
-        setTimeout(updateCarousel, 100); // Small delay to ensure styles are applied
-    }
-});
-
-
 // New Destinations Carousel Logic
 document.addEventListener('DOMContentLoaded', function() {
     const track = document.querySelector('.dest-carousel-track');
@@ -142,3 +87,32 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextBtn) nextBtn.addEventListener('click', () => manualScroll('next'));
 });
 
+\n
+// Scroll Animation Observer
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // observer.unobserve(entry.target); // Optional: stop observing once shown
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Select elements to animate on scroll
+    document.querySelectorAll('section:not(.hero), .service-card, .footer-col, .values-list li').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+});
+\n\n
+// Page Preloader
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('preloader-hidden');
+        }, 600); // 0.6s delay for smooth visual transition
+    }
+});
+\n

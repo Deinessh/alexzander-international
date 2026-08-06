@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Alexzander International</title>
-    <meta name="description" content="Learn more about Alexzander International and our legacy since 2000.">
+    <title>About Us - Alexzandar International Pvt Ltd</title>
+    <meta name="description" content="Learn more about Alexzandar International Pvt Ltd and our legacy since 2000.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-circle"></div>
+    </div>
+
 
     <!-- Header Navigation -->
     <header>
@@ -40,9 +46,9 @@
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="logo.jpeg" alt="Alexzander International Logo"
+                    <img src="logo.jpeg" alt="Alexzandar International Pvt Ltd Logo"
                         onerror="this.src='https://via.placeholder.com/50x50?text=AI'">
-                    <span>ALEXZANDER INTERNATIONAL</span>
+                    <span>Alexzandar International Pvt Ltd</span>
                 </a>
             </div>
             <ul class="nav-links">
@@ -67,29 +73,64 @@
     </section>
 
     <!-- Detailed About -->
-    <section>
-        <div class="container about-flex">
+    <section style="padding-top: 40px;">
+        <div class="container about-flex" style="align-items: center;">
             <div class="about-content" style="flex: 1;">
-                <div class="year-badge">Established in 2000</div>
+                <div class="year-badge">Established in 1999</div>
                 <h2>A Legacy of Trust & Excellence</h2>
-                <p>For over two decades, Alexzander International has been the cornerstone for individuals seeking to
-                    expand their horizons. Since our inception in 2000, we have grown into one of the most reliable
-                    consultancy firms based in Chennai, Tamil Nadu.</p>
-                <p>We understand that moving abroad for study, work, or leisure is a life-changing decision. Our expert
-                    consultants are committed to providing you with accurate information, transparent processes, and
-                    unwavering support.</p>
-                <br>
-                <h3>Our Mission</h3>
-                <p>To empower our clients with world-class advisory services, ensuring they achieve their global
-                    ambitions efficiently and ethically.</p>
-                <br>
-                <h3>Our Vision</h3>
-                <p>To be the premier partner of choice for comprehensive career and travel solutions globally.</p>
+                <p><strong>Alexzandar International Pvt Ltd</strong> is a trusted recruitment and staffing consultancy established in 1999 and headquartered in Tambaram, Chennai, Tamil Nadu. With over two decades of experience in the recruitment industry, we are committed to connecting talented job seekers with reputable employers across various sectors.</p>
+                <p>We specialize in both paid and unpaid placement services, offering customized recruitment solutions for freshers as well as experienced professionals. Our goal is to bridge the gap between employers seeking skilled talent and candidates looking for meaningful career opportunities.</p>
+                <p>At Alexzandar International Pvt Ltd, we understand that every organization has unique hiring requirements. Our experienced recruitment team carefully screens and shortlists candidates to ensure the right fit for every position.</p>
             </div>
             <div class="about-img" style="flex: 1;">
                 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
-                    alt="Corporate Office">
+                    alt="Corporate Office" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Cards -->
+    <section style="background: #f8fafc; padding: 60px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                <!-- Mission Card -->
+                <div style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center;">
+                    <div style="width: 70px; height: 70px; background: rgba(14, 165, 233, 0.1); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Our Mission</h3>
+                    <p style="color: #666; line-height: 1.6;">To provide reliable, ethical, and professional recruitment solutions that help organizations build strong teams while enabling job seekers to achieve successful careers.</p>
+                </div>
+                <!-- Vision Card -->
+                <div style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center;">
+                    <div style="width: 70px; height: 70px; background: rgba(14, 165, 233, 0.1); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Our Vision</h3>
+                    <p style="color: #666; line-height: 1.6;">To become one of India's most trusted manpower and recruitment consultancies by delivering exceptional staffing solutions, maintaining high professional standards, and creating long-term relationships.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--primary);">Our Core Values</h3>
+                <ul class="values-list" style="text-align: left;">
+                    <li>Integrity</li>
+                    <li>Professionalism</li>
+                    <li>Transparency</li>
+                    <li>Commitment</li>
+                    <li>Customer Satisfaction</li>
+                    <li>Excellence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outro Section -->
+    <section style="padding: 60px 0; text-align: center;">
+        <div class="container" style="max-width: 900px;">
+            <p style="font-size: 1.25rem; color: #444; font-weight: 500; line-height: 1.8; border-left: 4px solid var(--secondary); padding-left: 20px; text-align: left; background: #f0f7ff; padding: 25px; border-radius: 10px;">
+                At Alexzandar International Pvt Ltd, we believe that the right talent drives business success. Whether you are an employer looking for qualified professionals or a candidate searching for the right career opportunity, we are dedicated to providing dependable recruitment services that deliver results.
+            </p>
         </div>
     </section>
 
@@ -101,7 +142,7 @@
                     <a href="index.html" class="footer-logo">
                         <img src="logo.jpeg" alt="Logo" onerror="this.src='https://via.placeholder.com/100x50?text=AI'">
                     </a>
-                    <p>One-Stop Solution – Air tickets, Forex, tours, visas, and study abroad guidance under one roof.
+                    <p>One-Stop Solution Under One Roof.Trust in Every Step. Success in Every Placement.
                     </p>
                     <a href="about.html" style="color: white; font-weight: 500;">Read More</a>
                     <div class="footer-social">
@@ -124,11 +165,12 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="services.html">Global Visa Consultation</a></li>
-                        <li><a href="services.html">Visa Application Submission</a></li>
-                        <li><a href="services.html">Visa Appointment Arrangements</a></li>
-                        <li><a href="services.html">Interview Guidance</a></li>
-                        <li><a href="services.html">New Passport Services</a></li>
+                        <li><a href="services.html">Overseas Job Placement</a></li>
+                        <li><a href="services.html">Skilled & Unskilled Recruitment</a></li>
+                        <li><a href="services.html">IT & Non-IT Job Placement</a></li>
+                        <li><a href="services.html">Resume & Career Guidance</a></li>
+                        <li><a href="services.html">Pre-Departure Orientation</a></li>
+                        <li><a href="services.html">End-to-End Recruitment Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -145,7 +187,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 <span>Alexzander International</span>. All Rights Reserved
+                &copy; 2026 <span>Alexzandar International Pvt Ltd</span>. All Rights Reserved
             </div>
         </div>
     </footer>
