@@ -29,6 +29,26 @@ const servicesData = {
             { title: "Healthcare Administration", desc: "Roles in hospital management, reception, and patient care coordination." }
         ]
     },
+    "real-estate": {
+        title: "Real Estate",
+        desc: "Explore premium commercial and residential properties tailored to your business or lifestyle needs. We provide comprehensive real estate solutions and consultancy.",
+        img: "assets/images/service-real-estate.png",
+        includes: [
+            { title: "Commercial Properties", desc: "Prime locations for your business operations and expansions." },
+            { title: "Residential Housing", desc: "Premium apartments and houses tailored for luxury and comfort." },
+            { title: "Property Consultancy", desc: "Expert advice on real estate investment and property management." }
+        ]
+    },
+    "import-export": {
+        title: "Import & Export",
+        desc: "Seamless global trade logistics and supply chain management. We facilitate international import and export with dedicated compliance and shipping support.",
+        img: "assets/images/service-import-export.png",
+        includes: [
+            { title: "Global Logistics", desc: "End-to-end supply chain solutions and freight forwarding." },
+            { title: "Customs Compliance", desc: "Expert handling of customs clearance and documentation." },
+            { title: "Trade Consultancy", desc: "Strategic advice on international trade regulations and market expansion." }
+        ]
+    },
     "visa-appointment": {
         title: "Visa Appointment Arrangements",
         desc: "At Alexzandar International Pvt Ltd, we provide complete support for scheduling and managing your visa appointment, ensuring a smooth and hassle-free process. Our experienced consultants help you avoid long waiting times, incorrect appointment procedures, and unnecessary rejections.",
