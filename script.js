@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextBtn) nextBtn.addEventListener('click', () => manualScroll('next'));
 });
 
-\n
+
 // Scroll Animation Observer
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
-\n\n
+
 // Page Preloader
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
@@ -115,4 +115,3 @@ window.addEventListener('load', () => {
         }, 600); // 0.6s delay for smooth visual transition
     }
 });
-\n
