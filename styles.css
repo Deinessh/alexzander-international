@@ -154,8 +154,7 @@ header {
 }
 
 .logo-wrapper {
-    background: #000000;
-    /* Black background */
+    background: transparent;
     padding: 0 40px;
     display: flex;
     align-items: center;
@@ -179,8 +178,8 @@ header {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: #ffffff;
-    /* Logo text color */
+    color: #002244;
+    /* Dark blue text */
 }
 
 .nav-links {
