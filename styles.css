@@ -154,8 +154,8 @@ header {
 }
 
 .logo-wrapper {
-    background: #ffffff;
-    /* White background */
+    background: #000000;
+    /* Black background */
     padding: 0 40px;
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@ header {
 }
 
 .logo img {
-    height: 85px;
+    height: 110px;
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
@@ -179,7 +179,7 @@ header {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: var(--primary);
+    color: #ffffff;
     /* Logo text color */
 }
 
@@ -701,7 +701,7 @@ footer {
     }
 
     .logo img {
-        height: 70px;
+        height: 90px;
     }
 
     .logo span {
