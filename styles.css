@@ -154,9 +154,9 @@ header {
 }
 
 .logo-wrapper {
-    background: #000000;
-    /* Dark gray */
-    padding: 10px 40px;
+    background: #ffffff;
+    /* White background */
+    padding: 0 40px;
     display: flex;
     align-items: center;
 }
@@ -169,15 +169,17 @@ header {
 }
 
 .logo img {
-    height: 60px;
+    height: 85px;
+    width: auto;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .logo span {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: white;
+    color: var(--primary);
     /* Logo text color */
 }
 
@@ -689,7 +691,24 @@ footer {
     }
 
     .logo-wrapper {
-        padding: 10px 20px;
+        padding: 0 10px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .logo span {
+        font-size: clamp(0.8rem, 3.8vw, 1.2rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .hero h1 {
