@@ -2,7 +2,7 @@ const servicesData = {
     "airport-placement": {
         title: "Airport Job Placement",
         desc: "Kickstart your aviation career with premium placement services for ground staff, ticketing, and management roles across major global airports.",
-        img: "assets/images/service-airport.jpg",
+        img: "assets/images/service-airport-job-placement.png",
         includes: [
             { title: "Ground Staff Placement", desc: "Opportunities in baggage handling, customer service, and terminal operations." },
             { title: "Ticketing & Reservations", desc: "Roles in airline ticketing counters and booking management." },
