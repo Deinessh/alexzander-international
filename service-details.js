@@ -12,7 +12,7 @@ const servicesData = {
     "it-placement": {
         title: "IT Job Placement",
         desc: "Connecting top tech talent with leading global companies. We specialize in software development, cybersecurity, and IT support placements.",
-        img: "assets/images/service-it.jpg",
+        img: "assets/images/service-it-job-placement.png",
         includes: [
             { title: "Software Development", desc: "Placements for frontend, backend, and full-stack engineers." },
             { title: "Cybersecurity Roles", desc: "Opportunities for security analysts and ethical hackers." },
@@ -47,6 +47,36 @@ const servicesData = {
             { title: "Global Logistics", desc: "End-to-end supply chain solutions and freight forwarding." },
             { title: "Customs Compliance", desc: "Expert handling of customs clearance and documentation." },
             { title: "Trade Consultancy", desc: "Strategic advice on international trade regulations and market expansion." }
+        ]
+    },
+    "college-admission": {
+        title: "College Admission Guidance",
+        desc: "Expert counselling for both domestic and international college admissions. We help students navigate applications, scholarships, and university selection.",
+        img: "assets/images/service-college-admission.png",
+        includes: [
+            { title: "University Selection", desc: "Personalized advice to find the best fit for your academic goals." },
+            { title: "Application Assistance", desc: "Step-by-step support in drafting essays and submitting applications." },
+            { title: "Scholarship Guidance", desc: "Help with identifying and applying for financial aid and scholarships." }
+        ]
+    },
+    "it-non-it-recruitment": {
+        title: "IT & Non-IT Recruitment",
+        desc: "Comprehensive recruitment services for technical and non-technical roles. We connect top talent with leading companies across various industries.",
+        img: "assets/images/service-it-non-it.png",
+        includes: [
+            { title: "IT Staffing", desc: "Hiring for software, networking, and IT support positions." },
+            { title: "Non-IT Staffing", desc: "Placements for HR, administration, sales, and marketing roles." },
+            { title: "Executive Search", desc: "Specialized recruitment for senior and managerial positions." }
+        ]
+    },
+    "skilled-unskilled-recruitment": {
+        title: "Skilled & Unskilled Recruitment",
+        desc: "Dedicated staffing solutions for both skilled and unskilled labor categories, ensuring reliable workforce placement for diverse operational needs.",
+        img: "assets/images/service-skilled-unskilled.png",
+        includes: [
+            { title: "Skilled Labor", desc: "Recruitment for certified professionals like electricians, plumbers, and technicians." },
+            { title: "Unskilled Labor", desc: "Staffing for general labor roles in construction, manufacturing, and logistics." },
+            { title: "Bulk Hiring", desc: "Efficient mass recruitment services for large-scale projects." }
         ]
     },
     "visa-appointment": {
