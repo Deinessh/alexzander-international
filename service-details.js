@@ -81,7 +81,7 @@ const servicesData = {
     },
     "visa-appointment": {
         title: "Visa Appointment Arrangements",
-        desc: "At Alexzandar International Pvt Ltd, we provide complete support for scheduling and managing your visa appointment, ensuring a smooth and hassle-free process. Our experienced consultants help you avoid long waiting times, incorrect appointment procedures, and unnecessary rejections.",
+        desc: "At Alexzander International Pvt Ltd, we provide complete support for scheduling and managing your visa appointment, ensuring a smooth and hassle-free process. Our experienced consultants help you avoid long waiting times, incorrect appointment procedures, and unnecessary rejections.",
         img: "assets/images/visa-appointment.jpg",
         includes: [
             { title: "Guidance on Appointment Types", desc: "Expert advice on selecting the correct type of appointment based on your visa category." },
@@ -92,7 +92,7 @@ const servicesData = {
     },
     "visa-application": {
         title: "Visa Application Submission",
-        desc: "At Alexzandar International Pvt Ltd, we provide end-to-end assistance for your visa application submission. Navigating the complex visa process can be overwhelming, but our expert team ensures that your application is accurate, complete, and submitted on time.",
+        desc: "At Alexzander International Pvt Ltd, we provide end-to-end assistance for your visa application submission. Navigating the complex visa process can be overwhelming, but our expert team ensures that your application is accurate, complete, and submitted on time.",
         img: "assets/images/visa-application-large.jpg",
         includes: [
             { title: "Application Review", desc: "Thorough review of your completed application forms." },
@@ -102,7 +102,7 @@ const servicesData = {
     },
     "oci-card": {
         title: "OCI Card Services",
-        desc: "At Alexzandar International Pvt Ltd, we offer expert assistance for applying, renewing, or updating your Overseas Citizenship of India (OCI) cards.",
+        desc: "At Alexzander International Pvt Ltd, we offer expert assistance for applying, renewing, or updating your Overseas Citizenship of India (OCI) cards.",
         img: "assets/images/oci_card_service.png",
         includes: [
             { title: "New OCI Registration", desc: "Assistance with first-time OCI card applications." },
@@ -112,7 +112,7 @@ const servicesData = {
     },
     "new-passport": {
         title: "New Passport Services",
-        desc: "At Alexzandar International Pvt Ltd, we make the process of applying for a new passport smooth, transparent, and hassle-free.",
+        desc: "At Alexzander International Pvt Ltd, we make the process of applying for a new passport smooth, transparent, and hassle-free.",
         img: "assets/images/new_passport.png",
         includes: [
             { title: "Application Filling", desc: "We fill out your passport application accurately." },
@@ -122,7 +122,7 @@ const servicesData = {
     },
     "interview-guidance": {
         title: "Interview Guidance",
-        desc: "At Alexzandar International Pvt Ltd, we provide expert Interview Guidance to help you confidently face embassy officials.",
+        desc: "At Alexzander International Pvt Ltd, we provide expert Interview Guidance to help you confidently face embassy officials.",
         img: "assets/images/interview-large.jpg",
         includes: [
             { title: "Mock Interviews", desc: "Practice sessions simulating real embassy interviews." },
@@ -132,7 +132,7 @@ const servicesData = {
     },
     "indian-visa": {
         title: "Indian Visa Registration — Renewal Services",
-        desc: "At Alexzandar International Pvt Ltd, we provide end-to-end support for Indian visa registration and renewal to make your stay legal and secure.",
+        desc: "At Alexzander International Pvt Ltd, we provide end-to-end support for Indian visa registration and renewal to make your stay legal and secure.",
         img: "assets/images/indian_visa.png",
         includes: [
             { title: "FRRO Registration", desc: "Assistance with mandatory foreigner registration." },
@@ -142,7 +142,7 @@ const servicesData = {
     },
     "foreign-passport": {
         title: "Foreign Passport & PCC Services",
-        desc: "At Alexzandar International Pvt Ltd, we provide professional assistance for obtaining foreign passports and Police Clearance Certificates.",
+        desc: "At Alexzander International Pvt Ltd, we provide professional assistance for obtaining foreign passports and Police Clearance Certificates.",
         img: "assets/images/foreign-passport-large.jpg",
         includes: [
             { title: "PCC Application", desc: "Assistance in applying for a Police Clearance Certificate." },
@@ -151,7 +151,7 @@ const servicesData = {
     },
     "documents-prep": {
         title: "Documents Preparation Consultation",
-        desc: "At Alexzandar International Pvt Ltd, we provide expert support in preparing and organizing all essential documents for your applications.",
+        desc: "At Alexzander International Pvt Ltd, we provide expert support in preparing and organizing all essential documents for your applications.",
         img: "assets/images/documents-large.jpg",
         includes: [
             { title: "Document Structuring", desc: "Organizing your files in the exact order required by embassies." },
@@ -161,7 +161,7 @@ const servicesData = {
     },
     "global-visa": {
         title: "Global Visa Consultation",
-        desc: "At Alexzandar International Pvt Ltd, our Global Visa Consultation service is designed to help you navigate international immigration laws.",
+        desc: "At Alexzander International Pvt Ltd, our Global Visa Consultation service is designed to help you navigate international immigration laws.",
         img: "assets/images/global-visa-large.jpg",
         includes: [
             { title: "Country Selection", desc: "Advice on the best countries based on your profile." },
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('serviceTitle').textContent = service.title;
         document.getElementById('serviceDesc').textContent = service.desc;
         document.getElementById('serviceImage').src = service.img;
-        
+
         const includesList = document.getElementById('serviceIncludesList');
         includesList.innerHTML = '';
         service.includes.forEach(item => {
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `<h4>${item.title}</h4><p>${item.desc}</p>`;
             includesList.appendChild(li);
         });
-        
+
         document.getElementById('serviceIncludesTitle').textContent = `Our ${service.title} Service Includes:`;
     } else {
         document.getElementById('serviceTitle').textContent = "Service Not Found";
@@ -203,28 +203,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Handle WhatsApp Form Submission
     const waForm = document.getElementById('whatsappForm');
-    if(waForm) {
+    if (waForm) {
         waForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const name = document.getElementById('waName').value;
             const gender = document.getElementById('waGender').value;
             const phone = document.getElementById('waPhone').value;
             const email = document.getElementById('waEmail').value;
             const place = document.getElementById('waPlace').value;
-            
+
             const serviceName = service ? service.title : "General Inquiry";
-            
+
             let message = `*New Application for ${serviceName}*\n\n`;
             message += `*Name:* ${name}\n`;
             message += `*Gender:* ${gender}\n`;
             message += `*Phone:* ${phone}\n`;
-            if(email) message += `*Email:* ${email}\n`;
+            if (email) message += `*Email:* ${email}\n`;
             message += `*Place:* ${place}\n`;
-            
+
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/918098600060?text=${encodedMessage}`;
-            
+
             window.open(whatsappUrl, '_blank');
         });
     }
