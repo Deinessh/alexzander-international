@@ -569,7 +569,7 @@ footer {
 
 .footer-contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     margin-bottom: 15px;
     color: #999;
@@ -579,6 +579,8 @@ footer {
 .footer-contact-item i {
     color: var(--secondary);
     font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
 }
 
 .footer-bottom {
